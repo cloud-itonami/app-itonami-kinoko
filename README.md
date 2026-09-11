@@ -14,7 +14,7 @@ Worker/XRPC logic was moved, not rewritten:
 
 | Then | Now |
 |---|---|
-| `svelte/src/routes/+page.svelte` (the status page) | [`cljs/src/kinoko/app.cljs`](cljs/src/kinoko/app.cljs) — same seven facts + own path, faithfully ported (two fields corrected against the live wrangler config rather than the stale Svelte constant — see the namespace docstring) |
+| `svelte/src/routes/+page.svelte` (the status page) | [`cljs/src/kinoko/app.cljk`](cljs/src/kinoko/app.cljk) — same seven facts + own path, faithfully ported (two fields corrected against the live wrangler config rather than the stale Svelte constant — see the namespace docstring) |
 | `svelte/src/routes/xrpc/[...path]/+server.ts` (the file that actually deployed, per `wrangler.jsonc`'s former `main`) | [`src/xrpc-dispatcher.ts`](src/xrpc-dispatcher.ts) — moved byte-for-byte, only a provenance header comment added |
 | `wrangler.jsonc` `main: svelte/.svelte-kit/cloudflare/_worker.js` | `main` dropped entirely |
 | `wrangler.jsonc` `assets.directory: ./svelte/.svelte-kit/cloudflare/client` | `assets.directory: ./cljs/public` |
