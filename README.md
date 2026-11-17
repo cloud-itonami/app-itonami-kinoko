@@ -1,8 +1,8 @@
-# com-etzhayyim-app-kinoko
+# app-itonami-kinoko
 
 kinoko (きのこ) — fruiting body / PoNF consensus layer. Checks nutrient flow
 thresholds and forms new PoNF blocks when Shannon η-gated flow accumulates.
-Extracted from `etzhayyim/root:60-apps/etzhayyim-project-kinoko` (see
+Extracted from `itonami/root:60-apps/itonami-project-kinoko` (see
 `migration.edn`).
 
 ## Frontend migrated to ClojureScript (2026-09-07)

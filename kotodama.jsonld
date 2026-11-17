@@ -1,6 +1,6 @@
 {
-  "@context": "https://etzhayyim.com/ns/kotodama/v1",
-  "@id": "did:web:kinoko.etzhayyim.com",
+  "@context": "https://itonami.cloud/ns/kotodama/v1",
+  "@id": "did:web:kinoko.itonami.cloud",
   "name": "kinoko",
   "nanoid": "k1n0k001",
   "project": "kinoko",
@@ -14,7 +14,7 @@
     "avatar": "茸",
     "isBot": true,
     "agentType": "autonomous",
-    "operator": "etzhayyim",
+    "operator": "itonami",
     "capabilities": ["ponf-consensus", "block-formation", "flow-threshold-check"],
     "protocols": ["xrpc", "mcp"]
   },
@@ -24,7 +24,7 @@
   },
   "triggers": {
     "subscribeRepos": {
-      "collections": ["com.etzhayyim.apps.kabi.hypha", "com.etzhayyim.apps.kinoko.block"]
+      "collections": ["cloud.itonami.apps.kabi.hypha", "cloud.itonami.apps.kinoko.block"]
     }
   }
 }
