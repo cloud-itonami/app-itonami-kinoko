@@ -1,5 +1,5 @@
 (ns kinoko.app
-  "com-etzhayyim-app-kinoko appview — reagent + re-frame, view built from
+  "app-itonami-kinoko appview — reagent + re-frame, view built from
   jp-go-dds (デジタル庁デザインシステム) hiccup.
 
   Faithful port of the previous SvelteKit scaffold's status page
@@ -16,7 +16,7 @@
 
   - `:app/route-count` and `:app/routes` now report the two route
     patterns this repo's `wrangler.jsonc` actually declares
-    (`k1n0k001.etzhayyim.com/*`, `kinoko.etzhayyim.com/*`) and
+    (`k1n0k001.itonami.cloud/*`, `kinoko.itonami.cloud/*`) and
     `:app/vars` reports the eight var keys it actually declares
     (`AGENTGATEWAY_MCP_ROUTER_URL`, `APP_CAPABILITIES`, `APP_DESCRIPTION`,
     `APP_DISPLAY_NAME`, `APP_FRAMEWORK`, `APP_NANOID`,
@@ -46,11 +46,11 @@
 
     (require '[jp-go-dds.page :as page] '[clojure.java.io :as io])
     (spit \"public/index.html\"
-          (page/->page {:title \"etzhayyim-project-kinoko\"
+          (page/->page {:title \"itonami-project-kinoko\"
                          :lang \"ja\"
                          :description \"kinoko (きのこ) — fruiting body / PoNF consensus layer appview (reagent + re-frame + jp-go-dds).\"
                          :css (slurp (io/resource \"jp_go_dds/dds.css\"))}
-                        [:div {:id \"app\"} \"etzhayyim-project-kinoko loading…\"]
+                        [:div {:id \"app\"} \"itonami-project-kinoko loading…\"]
                         [:script {:src \"js/app.js\"}]))"
   (:require [reagent.dom :as rdom]
             [re-frame.core :as rf]
@@ -62,12 +62,12 @@
 ;; held (title/project/name/kind/routeCount/routes/vars/xrpc/relativePath).
 
 (def default-db
-  {:app/title "Ai etzhayyim Project Kinoko"
-   :app/project "etzhayyim-project-kinoko"
-   :app/name "etzhayyim-project-kinoko"
+  {:app/title "Ai itonami Project Kinoko"
+   :app/project "itonami-project-kinoko"
+   :app/name "itonami-project-kinoko"
    :app/kind "cloudflare surface"
    :app/route-count 2
-   :app/routes ["k1n0k001.etzhayyim.com/*" "kinoko.etzhayyim.com/*"]
+   :app/routes ["k1n0k001.itonami.cloud/*" "kinoko.itonami.cloud/*"]
    :app/vars ["AGENTGATEWAY_MCP_ROUTER_URL" "APP_CAPABILITIES" "APP_DESCRIPTION"
               "APP_DISPLAY_NAME" "APP_FRAMEWORK" "APP_NANOID" "APP_PERFORMER_TYPE"
               "APP_UI_TYPE"]
